@@ -1,0 +1,42 @@
+import { data } from '@/_mock/mockData'
+import { Button } from '@/components/ui/button'
+import RenderTable from '@/helpers/table'
+import { bookingColumns } from '../bookings/bookingsColumn'
+import { useNavigate } from 'react-router-dom'
+import AppCard from '@/helpers/card'
+import SearchComponent from '@/components/shared-components/searchComponent'
+import AppSelect from '@/helpers/select'
+import AppModal from '@/helpers/modal'
+import AddEmployee from './addEmployee'
+
+export default function EmployeePage() {
+  const navigate = useNavigate();
+  return (<>
+ <AppCard
+        title={"Liste des reservation"}
+        childrenTitleContent={
+          <> 
+          <SearchComponent layout='content'/>
+          <AppSelect dataList={undefined} placeHolder={"Payment"} textLabel={""} defaultValue={""} />
+          <AppSelect dataList={undefined} placeHolder={"Status"} textLabel={""} defaultValue={""} />
+          <AppSelect dataList={undefined} placeHolder={"Date"} textLabel={""} defaultValue={""} />
+       </>
+        }
+        ChildrenExtraContent={
+          <AppModal textButton={'Ajouter un membre'} title={'Ajouter un membre'} description={''} childrenContent={<AddEmployee/>} />
+        }
+        childrenContent={
+          <RenderTable
+            dataTable={data}
+            columnTable={bookingColumns}
+            actions={<Button>Edit</Button>}
+          />
+        }
+      />
+  </>
+   
+    
+    
+
+  )
+}
