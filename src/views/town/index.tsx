@@ -4,9 +4,9 @@ import AppCard from "@/helpers/card";
 import AppModal from "@/helpers/modal";
 import AppSelect from "@/helpers/select";
 import RenderTable from "@/helpers/table";
-import { Button } from "react-day-picker";
 import { bookingColumns } from "../bookings/bookingsColumn";
 import AddTown from "./addTown";
+import { Button } from "@/components/ui/button";
 
 export default function Town() {
   return (
