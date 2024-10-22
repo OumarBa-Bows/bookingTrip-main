@@ -73,3 +73,8 @@ export const vehicleSchema = z.object({
   type : z.string(),
    
 });
+
+export const townSchema = z.object({
+  name: z.string(),
+  code: z.string()
+})

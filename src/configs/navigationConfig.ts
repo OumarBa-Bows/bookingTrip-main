@@ -9,6 +9,7 @@ import {
   Parentheses,
   PersonStandingIcon,
   Settings,
+  Map
 } from "lucide-react";
 
 export const sideNavItems: INavigateItems[] = [
@@ -67,6 +68,13 @@ export const sideNavItems: INavigateItems[] = [
     title: "Vehicules",
     subItems: [],
     icon: Bus,
+  },
+  {
+    key: "#town",
+    path: "/villes",
+    title: "Villes",
+    subItems: [],
+    icon: Map,
   },
   {
     key: "#customers",
