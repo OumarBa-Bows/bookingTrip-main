@@ -15,6 +15,7 @@ const Cars = lazy(() => import("@/views/cars"));
 const Setting = lazy(() => import("@/views/settings"));
 const Passenger = lazy(() => import("@/views/travelers"));
 const Luggage = lazy(() => import("@/views/luggages"));
+const Town = lazy(() => import("@/views/town"));
 
 const AppViews: React.FC = () => {
   return (
@@ -34,6 +35,7 @@ const AppViews: React.FC = () => {
         <Route path="travelers" element={<Passenger />} />
         <Route path="addPassenger" element={<AddPassanger />} />
         <Route path="luggage" element={<Luggage />} />
+        <Route path="town" element={<Town />} />
         {/* </Route> */}
 
         {/* 404 Redirect */}
